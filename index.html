@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking form</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <section class="booking-form">
+        <section class="image-section">
+          <img
+            class="image-section__img"
+            src="image-131.jpg"
+            alt="hotel room"
+          />
+        </section>
+        <section class="form">
+          <h1 class="form__title">Room Reservation Form</h1>
+          <form
+            action="save-success.html"
+            method="GET"
+            class="form__booking-form"
+          >
+            <input
+              type="text"
+              name="full name"
+              class="form__full-name"
+              placeholder="Full Name"
+            />
+            <input
+              type="text"
+              name="email"
+              class="form__email"
+              placeholder="Email"
+              
+            />
+            <input
+              type="text"
+              name="phone"
+              class="form__phone"
+              placeholder="Phone"
+              
+            />
+            <input
+              type="text"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+              name="checkin"
+              class="form__check-in"
+              placeholder="Check-in date"
+              
+            />
+            <input
+              type="text"
+              onfocus="(this.type='date')"
+              onblur="(this.type='text')"
+              name="checkout"
+              class="form__check-out"
+              placeholder="Check-out date"
+              
+            />
+            <div class="form__room-type">
+              <select
+                name="room-type"
+                placeholder="Select room type"
+                class="form__select"
+              >
+                <optgroup>
+                  <option value="" disabled selected hidden>
+                    Select room type
+                  </option>
+                  <option value="text">Standard</option>
+                  <option value="text">Deluxe</option>
+                  <option value="text">Suite</option>
+                </optgroup>
+              </select>
+            </div>
+            <input
+              type="text"
+              name="number of guests"
+              class="form__guests-number"
+              placeholder="Number of guests"
+            />
+            <div class="forms__bed-type">
+              <label for="bed type">Bed type:</label>
+              <input type="radio" name="form__bed-type" value="single" />
+              <label for="single">Single</label>
+              <input type="radio" name="form__bed-type" value="double" />
+              <label for="double">Double</label>
+              <input type="radio" name="form__bed-type" value="twin" />
+              <label for="twin">Twin</label>
+            </div>
+            <textarea
+              class="form__textarea"
+              name="message"
+              cols="60"
+              rows="10"
+              placeholder="Comments"
+            ></textarea>
+            <div class="form__checbox">
+              <input type="checkbox" name="terms" required checked/>
+              <label for="form__checbox"
+                >I agree with terms and conditions.</label
+              >
+            </div>
+            <button type="submit" class="form__submit-button">Submit</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
